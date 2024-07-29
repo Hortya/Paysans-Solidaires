@@ -9,7 +9,7 @@
 
 <body>
 
-    <form action="{{route('store)'}}" method="post">
+    <form action="" method="post">
 
         @csrf
 
