@@ -75,17 +75,6 @@ class UserController extends Controller
     }
 
 
-    public function test()
-    {
-        $user = DB::table('users')
-            ->join('role_user', 'users.id', '=', 'role_user.user_id')
-            ->join('roles', 'role_user.role_id', '=', 'roles.id')
-            ->where('users.id', '=', '1')
-            ->select('roles.name')
-            ->get();
-        var_dump($user);
-    }
-
     private function isAdmin(string $idUser){
         $user = DB::table('users')
         ->join('role_user', 'users.id', '=', 'role_user.user_id')
@@ -106,4 +95,3 @@ class UserController extends Controller
     }
 
 }
- 

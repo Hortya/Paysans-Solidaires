@@ -17,7 +17,7 @@
         </ul>
     </div>
     @endif
-    <form action="{{route('store')}}" method="post">
+    <form action="{{route('login')}}" method="post">
 
         @csrf
 
@@ -27,7 +27,7 @@
         <label for="password">Veuillez saisir votre mot de passe :</label>
         <input type="password" name="password" id="password" require>
 
-        <button type="submit">Créer un compte</button>
+        <button type="submit">Valider</button>
 
     </form>
 
