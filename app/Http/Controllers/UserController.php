@@ -69,4 +69,36 @@ class UserController extends Controller
     {
         //
     }
+
+
+    public function isEmailKnowned(String $mail)
+    {
+
+        foreach (User::all() as $user) {
+
+            if ($mail === $user->email) {
+
+                return $user->id;
+            }
+        }
+
+        return 0;
+    }
+
+    public function connexion()
+    {
+        return view('connexion');
+    }
+
+    public function login(Request $request)
+    {
+        $userId=self::isEmailKnowned($request->email);
+
+            if ($userId === 0) {
+                echo "cet e-mail est inconnu";
+            }
+            else {
+                echo $userId;
+            }
+    }
 }
