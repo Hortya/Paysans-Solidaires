@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -27,7 +28,10 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    {   
+        //TODO-------------chek if the email is already in database------------------------
+        
+        
         $request->validate([
             'email' => 'required|regex:/(.+)@(.+)\.(.+)/'
         ]);
@@ -69,4 +73,37 @@ class UserController extends Controller
     {
         //
     }
+
+
+    public function test()
+    {
+        $user = DB::table('users')
+            ->join('role_user', 'users.id', '=', 'role_user.user_id')
+            ->join('roles', 'role_user.role_id', '=', 'roles.id')
+            ->where('users.id', '=', '1')
+            ->select('roles.name')
+            ->get();
+        var_dump($user);
+    }
+
+    private function isAdmin(string $idUser){
+        $user = DB::table('users')
+        ->join('role_user', 'users.id', '=', 'role_user.user_id')
+        ->join('roles', 'role_user.role_id', '=', 'roles.id')
+        ->where('users.id', '=', $idUser)
+        ->select('roles.name')
+        ->get();
+        if($user === 'admin'){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private function changeRoles(User $user){
+        
+    }
+
 }
+ 
