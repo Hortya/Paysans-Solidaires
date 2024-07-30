@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -27,7 +28,10 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    {   
+        //TODO-------------chek if the email is already in database------------------------
+        
+        
         $request->validate([
             'email' => 'required|regex:/(.+)@(.+)\.(.+)/'
         ]);
@@ -71,34 +75,23 @@ class UserController extends Controller
     }
 
 
-    public function isEmailKnowned(String $mail)
-    {
-
-        foreach (User::all() as $user) {
-
-            if ($mail === $user->email) {
-
-                return $user->id;
-            }
+    private function isAdmin(string $idUser){
+        $user = DB::table('users')
+        ->join('role_user', 'users.id', '=', 'role_user.user_id')
+        ->join('roles', 'role_user.role_id', '=', 'roles.id')
+        ->where('users.id', '=', $idUser)
+        ->select('roles.name')
+        ->get();
+        if($user === 'admin'){
+            return true;
         }
-
-        return 0;
+        else {
+            return false;
+        }
     }
 
-    public function connexion()
-    {
-        return view('connexion');
+    private function changeRoles(User $user){
+        
     }
 
-    public function login(Request $request)
-    {
-        $userId=self::isEmailKnowned($request->email);
-
-            if ($userId === 0) {
-                echo "cet e-mail est inconnu";
-            }
-            else {
-                echo $userId;
-            }
-    }
 }
