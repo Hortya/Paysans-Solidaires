@@ -33,9 +33,13 @@ class UserController extends Controller
         
         
         $request->validate([
-            'email' => 'required|regex:/(.+)@(.+)\.(.+)/'
+            'firstname' => 'required|string|max:150',
+            'lastname' => 'required|string|max:150',
+            'email' => 'required|regex:/(.+)@(.+)\.(.+)/',
         ]);
         $user = new User();
+        $user->firstname = strip_tags($request->firstname);
+        $user->lastname = strip_tags($request->lastname);
         $user->email = strip_tags($request->email);
         $user->password = password_hash($request->password, PASSWORD_BCRYPT);
         $user->save();
