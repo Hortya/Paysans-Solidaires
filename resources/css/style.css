@@ -1,0 +1,149 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root {
+    --vert : #485419;
+    --vertclair : #4854199c;
+    --blanc : #F9FDE9;
+}
+
+body {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    background-color: var(--blanc);
+}
+
+
+/* TITRES */
+h1, h2, h3, h4, h5, h5 {
+    font-family: "Anton", sans-serif;
+    color: var(--vert);
+}
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2 {
+    font-size: 2.3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.8rem;
+}
+h5 {
+    font-size: 1.5rem;
+}
+h6 {
+    font-size: 1.3rem;
+}
+
+
+/* HEADER */
+header {
+    background-image: url("../../public/img/header.png");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+}
+header img {
+    width: 70%;
+}
+
+/* SECTION */
+main {
+    margin: 60px 0;
+}
+
+section {
+    margin: 0 2rem;
+}
+
+
+/* FOOTER */
+footer {
+    color: var(--blanc);
+    background-color: var(--vert);
+    padding: 60px 20px;
+}
+
+footer ul{
+    font-size: 0.85rem;
+    margin-top: 50px;
+}
+footer li {
+    margin-top: 15px;
+}
+
+footer p {
+    font-family: "Anton", sans-serif;
+}
+
+footer a {
+    color: var(--blanc);
+}
+
+
+
+/* IMAGES */
+section img {
+    width: 100%;
+    border-radius: 1.4rem;
+}
+img {
+    width: 100%;
+}
+.wid {
+    width: 50%;
+}
+
+/* PARAGRAPHE */
+p {
+    margin: 1rem 0;
+}
+
+
+/* BOUTON */
+.cta {
+    font-family: "Anton", sans-serif;
+    letter-spacing: 0.1rem;
+    color: var(--blanc);
+    background-color: var(--vertclair);
+    padding: 10px 20px;
+    border-radius: 1rem;
+}
+
+
+
+/* FLEX */
+.flex { 
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.spacebetween {
+    justify-content: space-between;
+}
+.column {
+    flex-direction: column;
+}
+.center {
+    align-items: center;
+    gap: 60px;
+}
+.left {
+    align-items: flex-start;
+}
+
+/* GAP */
+.gap {
+    gap: 140px;
+}
+.gap30 {
+    gap: 30px;
+}
+
+.font {
+    font-family: "Anton", sans-serif;
+}
