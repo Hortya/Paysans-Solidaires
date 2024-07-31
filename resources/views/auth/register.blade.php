@@ -1,59 +1,72 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>paysans-solidaires</title>
+        @vite('resources/css/app.css')
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    </head>
 
-        <!-- Firstname -->
-        <div>
-            <x-input-label for="firstname" :value="__('Firstname')" />
-            <x-text-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus autocomplete="firstname" />
-            <x-input-error :messages="$errors->get('firstname')" class="mt-2" />
-        </div>
-        
-        <!-- LastName -->
-        <div>
-            <x-input-label for="lastname" :value="__('Lastame')" />
-            <x-text-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus autocomplete="lastname" />
-            <x-input-error :messages="$errors->get('lastname')" class="mt-2" />
-        </div>
+    <body class="body">
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        <h2 class="ttl anton-regular">
+            {{ __('Inscription') }}
+        </h2>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
+        <form class="form" method="POST" action="{{ route('register') }}">
+            @csrf
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+            <!-- Firstname -->
+            <div class="position">
+                <x-input-label class="txt dm-mono-regular" for="firstname" :value="__('Prénom :')" />
+                <x-text-input id="firstname" class="input-itm-name" type="text" name="firstname" :value="old('firstname')" required autofocus autocomplete="firstname" />
+                <x-input-error :messages="$errors->get('firstname')" class="mt-2" />
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-input-label class="txt dm-mono-regular" for="lastname" :value="__('Nom :')" />
+                <x-text-input id="lastname" class="input-itm-name" type="text" name="lastname" :value="old('lastname')" required autofocus autocomplete="lastname" />
+                <x-input-error :messages="$errors->get('lastname')" class="mt-2" />
+            </div>
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
+            <!-- Email Address -->
+            <div class="position">
+                <x-input-label class="txt dm-mono-regular" for="email" :value="__('Mail')" />
+                <x-text-input id="email" class="input-itm" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            </div>
 
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
+            <!-- Password -->
+            <div class="position">
+                <x-input-label class="txt dm-mono-regular" for="password" :value="__('Mot de passe')" />
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
+                <x-text-input id="password" class="input-itm" type="password" name="password" required autocomplete="new-password" />
 
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="position">
+                <x-input-label class="txt dm-mono-regular" for="password_confirmation" :value="__('Confirmation mot de passe')" />
+
+                <x-text-input id="password_confirmation" class="input-itm" type="password" name="password_confirmation" required autocomplete="new-password" />
+
+                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+            </div>
+
+            <div class="position">
+                <input class="checkbox" type="checkbox" name="read" value="read">
+                <label class="txt dm-mono-regular" for="read">J'ai lu ...</label>
+            </div>
+
+            <div class="position">
+                <x-primary-button class="btn anton-regular">
+                    {{ __('Valider') }}
+                </x-primary-button>
+
+            </div>
+        </form>
+    </body>

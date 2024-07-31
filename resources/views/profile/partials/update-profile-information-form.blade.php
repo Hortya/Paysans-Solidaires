@@ -1,12 +1,10 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('Profile Information') }}
+            {{ __('Inscription') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("Update your account's profile information and email address.") }}
-        </p>
+
     </header>
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
@@ -18,19 +16,19 @@
         @method('patch')
 
         <div>
-            <x-input-label for="firstname" :value="__('Firstname')" />
+            <x-input-label for="firstname" :value="__('Prénom')" />
             <x-text-input id="firstname" name="firstname" type="text" class="mt-1 block w-full" :value="old('firstname', $user->firstname)" required autofocus autocomplete="firstname" />
             <x-input-error class="mt-2" :messages="$errors->get('firstname')" />
         </div>
 
         <div>
-            <x-input-label for="lastname" :value="__('Lastname')" />
+            <x-input-label for="lastname" :value="__('Nom')" />
             <x-text-input id="lastname" name="lastname" type="text" class="mt-1 block w-full" :value="old('lastname', $user->lastname)" required autofocus autocomplete="lastname" />
             <x-input-error class="mt-2" :messages="$errors->get('lastname')" />
         </div>
 
         <div>
-            <x-input-label for="email" :value="__('Email')" />
+            <x-input-label for="email" :value="__('Mail')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
