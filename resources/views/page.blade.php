@@ -13,16 +13,8 @@
         <img src="img/logo_vert.svg" alt="Logo Paysans Solidaires">
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="">Nos produits</a></li>
-            <li><a href="">Nos producteurs</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="login">Mon compte</a></li>
-            <li><a href="">Panier</a></li>
-        </ul>
-    </nav>
-
+    <x-main-nav />
+    
         @section('content')
         The page content
         @show
