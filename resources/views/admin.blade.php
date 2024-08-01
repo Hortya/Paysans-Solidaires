@@ -16,10 +16,11 @@
     </form>
     <ul>
         @foreach(DB::table('users')->orderBy('lastname', 'asc')->get() as $user)
-        <li>
-           <p>Prénom : {{$user->firstname}}</p>
-           <p>Nom : {{$user->lastname}}</p> 
-        </li>
+        <div class="flex">
+                <p>{{$user->lastname}}</p>
+                <p>{{$user->firstname}}</p>
+                <p>{{$user->roles()->name}}</p>
+        </div>
         @endforeach
     </ul>
 

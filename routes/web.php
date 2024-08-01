@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -23,16 +23,9 @@ require __DIR__.'/auth.php';
 
 Route::middleware('role:admin')->group(function (){
     Route::get('/admin', function () {
-        return view('admin');
+        return view('admin1');
     })->name('admin');
     Route::get('/role', function () {
         return view('role');
     });
-});
-
-Route::get('/admin1', function(){
-    return view('admin1');
-});
-Route::get('/admin2', function(){
-    return view('admin2');
 });
