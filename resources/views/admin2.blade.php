@@ -23,58 +23,33 @@
         </ul>
     </nav>
 
-    <main class="flex column">
-        <h1>Gestion des utilisateurs</h1>
-        <form class="flex" action="#">
-            <input type="search" placeholder="Search...">
-        </form>
+    <main class="flex column"> 
 
-        <div class="flex">
-            <a href="" class="filtre">Filtres<img class="arrow" src="img/pictos/arrow-bas.svg" alt="Flèche vers le bas"></a>
-        </div>
-       
-        <div class="flex">
-            <p class="gras">NOM</p>
-            <p class="gras">Prénom</p>
-            <p class="gras">Rôles</p>
-        </div>
-        <section class="flex column gap-user">
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-        </section>
-        <div class="flex gap30">
-            <a href="">1</a>
-            <a href=""><img src="img/pictos/Vector.svg" alt="Flèche de droite pour changer de page"></a>
-        </div>
-        <div class="flex center">
+    <h1>Gestion des utilisateurs</h1>
+    <form class="flex" action="#">
+        <input type="search" placeholder="Search...">
+    </form>
+
+    <div class="flex">
+        <a href="" class="filtre">Filtres<img class="arrow" src="img/pictos/arrow-bas.svg" alt="Flèche vers le bas"></a>
+    </div>
+
+    <section class="flex column">
+        <div class="flex start">
+            <p>NOM : DUPONT</p>
+            <p>Prénom : Alexandre</p>
+        </div> 
+        <p>E-mail : alexandredupont@gmail.com</p>
+        <p>Cotisation payée :</p>
+        <p>Rôle : Adhérent</p>
+    </section>
+
+    <a class="align-center gras" href="admin3.blade.php">Modifier le rôle</a>
+
+    <div class="flex center">
             <a href=""><img class="picto" src="img/pictos/Vector2.svg">Revenir à la page précédente</a>
         </div>
-
     </main>
-
 
     <footer class="flex column">
         <div class="flex column center gap30">

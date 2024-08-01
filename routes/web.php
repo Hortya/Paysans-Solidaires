@@ -26,3 +26,6 @@ Route::get('/admin1', function(){
 Route::get('/admin2', function(){
     return view('admin2');
 });
+Route::get('/admin3', function(){
+    return view('admin3');
+});
