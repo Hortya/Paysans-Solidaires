@@ -1,17 +1,45 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('page')
+@vite("resources/css/reset.css")
+@vite("resources/css/style.css")
+@vite('resources/css/app.css')
+@section('title')
+@section('content')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
+<main class="body">
+
+    <h2 class="ttl anton-regular">
+        {{ __('Mon compte') }}
+    </h2>
+
+    <div class="dashboard-itm">
+        <ul>
+            <li>Cotisation</li>
+            <li>Adhérent depuis le :</li>
+            <li>Renouveler sa cotisation avant le :</li>
+        </ul>
     </div>
-</x-app-layout>
+
+    <div>
+        <ul class="dashboard-lst">
+            <li><a class="dashboard-txt" href="#">Gestion des <br> utilisateurs</a></li>
+            <li><a class="dashboard-txt" href="#">Informations</a></li>
+            <li><a class="dashboard-txt" href="#">Paiements</a></li>
+            <li><a class="dashboard-txt" href="#">Commandes</a></li>
+            <li><a class="dashboard-txt" href="#">Planning</a></li>
+            <li><a class="dashboard-txt" href="#">Calendrier</a></li>
+            <li><a class="dashboard-txt" href="#">Panier</a></li>
+        </ul>
+    </div>
+
+    <form class="position form-dashboard-lnk" method="POST" action="{{ route('logout') }}">
+        @csrf
+
+        <x-responsive-nav-link :href="route('logout')" class="form-dashboard-lnk" onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+            {{ __('Se déconnecter') }}
+        </x-responsive-nav-link>
+    </form>
+
+</main>
+
+@endsection
