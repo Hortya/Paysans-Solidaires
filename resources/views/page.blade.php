@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paysans Solidaires</title>
+    @vite('resources/css/header-nav.css')
 </head>
 
 <body>
@@ -13,19 +14,39 @@
         <img src="img/logo_vert.svg" alt="Logo Paysans Solidaires">
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="">Nos produits</a></li>
-            <li><a href="">Nos producteurs</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="login">Mon compte</a></li>
-            <li><a href="">Panier</a></li>
-        </ul>
-    </nav>
+    <div class="container-nav">
 
-        @section('content')
-        The page content
-        @show
+        <nav>
+            <input class="burger-shower" type="checkbox" id="burger-shower">
+            <label for="burger-shower" class="hamburger"></label>
+            <ul class="burger-menu">
+                <li class="burger-txt">
+                    <a class="dashboard-txt" href="#">Nos produits</a>
+                </li>
+                <li class="burger-txt">
+                    <a class="dashboard-txt" href="#">Nos producteurs</a>
+                </li>
+                <li class="burger-txt">
+                    <a class="dashboard-txt" href="#">Contact</a>
+                </li>
+                <li class="burger-txt">
+                    <a class="dashboard-txt" href="login">Mon compte</a>
+                </li>
+                <li class="burger-txt">
+                    <a class="dashboard-txt" href="#">Panier</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="notification notification-img">
+            <a href="#"></a>
+        </div>
+
+    </div>
+
+    @section('content')
+    The page content
+    @show
 
     <footer class="flex column">
         <div class="flex column center gap30">

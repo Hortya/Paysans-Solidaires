@@ -1,6 +1,7 @@
 :root {
     font-size: 14px;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -136,12 +137,34 @@
     margin-top: 3.42rem;
 }
 
+.dashboard-position {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "cotisation links";
+}
+
+.cotisation {
+    grid-area: cotisation;
+}
+
+.links {
+    grid-area: links;
+}
+
+
 .dashboard-itm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
     width: 14.35rem;
     height: 10.14rem;
     background-color: #FFFFFF;
     border-radius: 8px;
-    border: 2rem #000000;
+    border: 1px solid #485419;
+    padding-left: 0.5rem;
     margin: 4rem 0 0 1.5rem;
 }
 
@@ -150,7 +173,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     text-align: end;
-    margin-right: 1.5rem;
+    margin: 4rem 1.5rem 0 0;
     gap: 1rem;
 }
 

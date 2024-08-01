@@ -11,24 +11,27 @@
         {{ __('Mon compte') }}
     </h2>
 
-    <div class="dashboard-itm">
-        <ul>
-            <li>Cotisation</li>
-            <li>Adhérent depuis le :</li>
-            <li>Renouveler sa cotisation avant le :</li>
-        </ul>
-    </div>
+    <div class="dashboard-position">
 
-    <div>
-        <ul class="dashboard-lst">
-            <li><a class="dashboard-txt" href="#">Gestion des <br> utilisateurs</a></li>
-            <li><a class="dashboard-txt" href="#">Informations</a></li>
-            <li><a class="dashboard-txt" href="#">Paiements</a></li>
-            <li><a class="dashboard-txt" href="#">Commandes</a></li>
-            <li><a class="dashboard-txt" href="#">Planning</a></li>
-            <li><a class="dashboard-txt" href="#">Calendrier</a></li>
-            <li><a class="dashboard-txt" href="#">Panier</a></li>
-        </ul>
+        <div >
+            <ul class="dashboard-itm cotisation">
+                <li>Cotisation :</li>
+                <li>Adhérent depuis le :</li>
+                <li>Renouveler sa cotisation avant le :</li>
+            </ul>
+        </div>
+
+        <div class=" links">
+            <ul class="dashboard-lst">
+                <li><a class="dashboard-txt" href="#">Gestion des <br> utilisateurs</a></li>
+                <li><a class="dashboard-txt" href="#">Informations</a></li>
+                <li><a class="dashboard-txt" href="#">Paiements</a></li>
+                <li><a class="dashboard-txt" href="#">Commandes</a></li>
+                <li><a class="dashboard-txt" href="#">Planning</a></li>
+                <li><a class="dashboard-txt" href="#">Calendrier</a></li>
+                <li><a class="dashboard-txt" href="#">Panier</a></li>
+            </ul>
+        </div>
     </div>
 
     <form class="position form-dashboard-lnk" method="POST" action="{{ route('logout') }}">
