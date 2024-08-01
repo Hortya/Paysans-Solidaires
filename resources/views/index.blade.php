@@ -1,6 +1,7 @@
 @extends('page')
 @vite("resources/css/reset.css")
 @vite("resources/css/style.css")
+@vite('resources/css/app.css')
 @section('title')
 @section('content')
 
