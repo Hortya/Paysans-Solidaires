@@ -8,6 +8,10 @@
         <form class="flex" action="#">
             <input type="search" placeholder="Search...">
         </form>
+
+        <div class="flex">
+            <a href="" class="filtre">Filtres<img class="arrow" src="img/pictos/arrow-bas.svg" alt="Flèche vers le bas"></a>
+        </div>
        
         <div class="flex">
             <p class="gras">NOM</p>
@@ -19,7 +23,7 @@
         <div class="flex">
                 <p>{{$user->lastname}}</p>
                 <p>{{$user->firstname}}</p>
-                <p>{{$user->name}}</p>
+                <p class="marg0">{{$user->name}}</p>
         </div>
         @endforeach
         </section>
