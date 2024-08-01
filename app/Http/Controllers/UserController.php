@@ -16,35 +16,6 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('register');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {   
-        //TODO-------------chek if the email is already in database------------------------
-        
-        
-        $request->validate([
-            'firstname' => 'required|string|max:150',
-            'lastname' => 'required|string|max:150',
-            'email' => 'required|regex:/(.+)@(.+)\.(.+)/',
-        ]);
-        $user = new User();
-        $user->firstname = strip_tags($request->firstname);
-        $user->lastname = strip_tags($request->lastname);
-        $user->email = strip_tags($request->email);
-        $user->password = password_hash($request->password, PASSWORD_BCRYPT);
-        $user->save();
-        var_dump('ok');
-    }
 
     /**
      * Display the specified resource.
@@ -79,7 +50,7 @@ class UserController extends Controller
     }
 
 
-    private function isAdmin(string $idUser){
+    public static function isAdmin(string $idUser){
         $user = DB::table('users')
         ->join('role_user', 'users.id', '=', 'role_user.user_id')
         ->join('roles', 'role_user.role_id', '=', 'roles.id')
