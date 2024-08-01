@@ -23,58 +23,55 @@
         </ul>
     </nav>
 
-    <main class="flex column">
-        <h1>Gestion des utilisateurs</h1>
-        <form class="flex" action="#">
-            <input type="search" placeholder="Search...">
-        </form>
+    <main class="flex column"> 
+
+    <h1>Modifier le rôle</h1>
+    <form class="flex" action="#">
+        <input type="search" placeholder="Search...">
+    </form>
+
+    <div class="flex">
+        <a href="" class="filtre">Filtres<img class="arrow" src="img/pictos/arrow-bas.svg" alt="Flèche vers le bas"></a>
+    </div>
+
+    <section class="flex start">
+        <p class="gras">Nom : Dupont</p>
+        <p>Prénom : Alexandre</p>
+    </section>
+
+    <section>
+
+    <section class="flex column gap30">
+        <div class="flex reverse-bet border-bot">
+            <input type="checkbox">
+                <nom>Administrateur</nom>
+            </input>
+        </div>
+        <div class="flex reverse-bet border-bot">
+            <input type="checkbox">
+                <nom>Responsable producteur</nom>
+            </input>
+        </div>
+        <div class="flex reverse-bet border-bot">
+            <input type="checkbox">
+                <nom>Producteur</nom>
+            </input>
+        </div>
+        <div class="flex reverse-bet border-bot">
+            <input type="checkbox">
+                <nom>Adhérent</nom>
+            </input>
+        </div>
 
         <div class="flex">
-            <a href="" class="filtre">Filtres<img class="arrow" src="img/pictos/arrow-bas.svg" alt="Flèche vers le bas"></a>
+            <button class="cta" type="submit">Valider</button>
         </div>
-       
-        <div class="flex">
-            <p class="gras">NOM</p>
-            <p class="gras">Prénom</p>
-            <p class="gras">Rôles</p>
-        </div>
-        <section class="flex column gap-user">
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-            <div class="flex">
-                <a>NOM</a>
-                <a>Prénom</a>
-                <p class="marg0">Rôles</p>
-            </div>
-        </section>
-        <div class="flex gap30">
-            <a href="">1</a>
-            <a href=""><img src="img/pictos/Vector.svg" alt="Flèche de droite pour changer de page"></a>
-        </div>
-        <div class="flex center">
+    </section>
+
+    <div class="flex center margtop">
             <a href=""><img class="picto" src="img/pictos/Vector2.svg">Revenir à la page précédente</a>
         </div>
-
     </main>
-
 
     <footer class="flex column">
         <div class="flex column center gap30">

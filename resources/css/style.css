@@ -39,6 +39,18 @@ h6 {
     font-size: 1.3rem;
 }
 
+/* POLICES, GRAISSE, ... */
+.font {
+    font-family: "Anton", sans-serif;
+}
+.gras {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.align-center {
+    text-align: center;
+}
+
 
 /* HEADER */
 header {
@@ -85,8 +97,7 @@ footer a {
 }
 
 
-
-/* IMAGES */
+/* IMAGES - PICTOGRAMMES*/
 section img {
     width: 100%;
     border-radius: 1.4rem;
@@ -101,6 +112,10 @@ img {
     width: 6%;
     margin-right: 10px;
 }
+.arrow {
+    width: 10%;
+    margin-left: 15px;
+}
 
 
 /* PARAGRAPHE */
@@ -108,7 +123,6 @@ p {
     margin: 1rem 0;
 }
 
-/* INPUT */
 
 /* BOUTON */
 .cta {
@@ -119,12 +133,15 @@ p {
     padding: 10px 20px;
     border-radius: 1rem;
 }
+button {
+    border: none;
+}
 
 /* BARRE DE RECHERCHE  */
 form{
     margin: 0 auto;
     }
-    
+
     input[type=search]{
     width: 400px;
     height: 40px;
@@ -135,6 +152,21 @@ form{
     border: solid var(--vert) 2px;
     background: url('img/pictos/loupe.svg') 7px center no-repeat;
     }
+
+
+ /* FILTRES */
+.filtre {
+    background-color: white;
+    border: solid var(--vert) 2px;
+    padding: 10px 160px;
+}
+
+
+/* BORDER PAGE MODIF ROLE */
+.border-bot {
+    padding-bottom: 30px;
+    border-bottom: solid var(--vert) 2px;
+}
 
 
 /* FLEX */
@@ -156,7 +188,13 @@ form{
 .left {
     align-items: flex-start;
 }
-
+.start {
+    justify-content: flex-start;
+}
+.reverse-bet {
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
 
 /* GAP */
 .gap {
@@ -166,17 +204,18 @@ form{
     gap: 30px;
 }
 .gap-user {
-    gap: 0 60px;
+    gap: 20px 60px;
 }
 .gap0 {
     gap: 0;
 }
 
-/* POLICES, GRAISSE, ... */
-.font {
-    font-family: "Anton", sans-serif;
+/* MARGE */
+.marg0 {
+    margin: 0;
 }
-.gras {
-    font-weight: 500;
-    text-transform: uppercase;
+.margtop {
+    margin-top: 60px;
 }
+
+
