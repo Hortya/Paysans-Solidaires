@@ -19,3 +19,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/admin1', function(){
+    return view('admin1');
+});
+Route::get('/admin2', function(){
+    return view('admin2');
+});
