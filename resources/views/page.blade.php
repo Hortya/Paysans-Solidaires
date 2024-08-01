@@ -18,18 +18,14 @@
             <li><a href="">Nos produits</a></li>
             <li><a href="">Nos producteurs</a></li>
             <li><a href="">Contact</a></li>
-            <li><a href="">Mon compte</a></li>
+            <li><a href="login">Mon compte</a></li>
             <li><a href="">Panier</a></li>
         </ul>
     </nav>
 
-    <main>
-
         @section('content')
         The page content
         @show
-
-    </main>
 
     <footer class="flex column">
         <div class="flex column center gap30">

@@ -17,7 +17,7 @@
             <p>
                 Les consommateurs s’engagent à acheter une part de la récolte à l’avance, ce qui permet aux agriculteurs de planifier leur production en toute sécurité. </p>
         </div>
-        <a class="cta" href="">Nous rejoindre !</a>
+        <a class="cta" href="register">Nous rejoindre !</a>
     </section>
 
     <img src="img/section1.png" alt="Image d'un champ">
@@ -31,7 +31,7 @@
             et de soutenir les producteurs locaux. </p>
         <p>Ensemble, nous pouvons créer un réseau solidaire qui valorise le travail des agriculteurs et garantit des produits frais et de qualité pour tous.</p>
         </div>
-        <a class="cta" href="">Devenir Collaborateur</a>
+        <a class="cta" href="register">Devenir Collaborateur</a>
     </section>
 
     <img src="img/section2.png" alt="Image d'un champ">
@@ -43,7 +43,7 @@
             <p>Découvrez le plaisir de consommer des produits frais, locaux et de saison, tout en soutenant directement les agriculteurs de votre région. En devenant membre, vous participez à un réseau solidaire qui valorise le travail des producteurs et favorise une agriculture durable et respectueuse de l’environnement.</p>
             <p>Ensemble, nous pouvons créer une communauté engagée pour une alimentation saine et responsable.</p>
         </div>
-        <a class="cta" href="">Devenir adhérent</a>
+        <a class="cta" href="register">Devenir adhérent</a>
     </section>
 </main>
 
