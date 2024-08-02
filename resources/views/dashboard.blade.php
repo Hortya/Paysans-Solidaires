@@ -4,7 +4,6 @@
 @vite('resources/css/app.css')
 @section('title')
 @section('content')
-
 <main class="body">
 
     <h2 class="ttl anton-regular">
@@ -15,9 +14,11 @@
 
         <div >
             <ul class="dashboard-itm cotisation">
-                <li>Cotisation :</li>
+
+                <li>Cotisation : à payer</li>
                 <li>Adhérent depuis le :</li>
                 <li>Renouveler sa cotisation avant le :</li>
+                
             </ul>
         </div>
 
