@@ -13,7 +13,7 @@
         <a href="" class="filtre">Filtres<img class="arrow" src="img/pictos/arrow-bas.svg" alt="Flèche vers le bas"></a>
     </div>
 
-    <div class="flex">
+    <div class="grid">
         <p class="gras">NOM</p>
         <p class="gras">Prénom</p>
         <p class="gras">Rôles</p>
@@ -29,6 +29,27 @@
                 </a>
             </li>
             @endforeach
+            <li>
+                <a href="" class="grid border-bot2">
+                    <p class="size-small upp">Vaillancour</p>
+                    <p class="size-small">Olivier</p>
+                    <p class="size-small">Admin</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="grid border-bot2">
+                    <p class="size-small upp">Chaussée</p>
+                    <p class="size-small">Valentine</p>
+                    <p class="size-small">Producteur</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="grid border-bot2">
+                    <p class="size-small upp">Blanc</p>
+                    <p class="size-small">Yvette</p>
+                    <p class="size-small">Adhérent</p>
+                </a>
+            </li>
         </ul>
     </section>
     <div class="flex gap30">

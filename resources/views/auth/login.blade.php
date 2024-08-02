@@ -19,17 +19,17 @@
         <div class="form">
 
             <!-- Email Address -->
-            <div class="form-login-mail">
-                <x-input-label class="txt dm-mono-regular" for="email" :value="__('Mail :')" />
-                <x-text-input id="email" class="input-itm" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <div class="grid-input form-login-mail margtop">
+                <x-input-label class="txt dm-mono-regular" for="email" :value="__('E-mail')" />
+                <x-text-input id="email" class="input-itm border-input pad-input" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
             <!-- Password -->
-            <div class="form-login-password">
+            <div class="grid-input form-login-password">
                 <x-input-label class="txt dm-mono-regular" for="password" :value="__('Mot de passe')" />
 
-                <x-text-input id="password" class="input-itm" type="password" name="password" required autocomplete="current-password" />
+                <x-text-input id="password" class="input-itm border-input pad-input" type="password" name="password" required autocomplete="current-password" />
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
