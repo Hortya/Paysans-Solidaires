@@ -41,6 +41,11 @@
     grid-template-rows: 1fr;
     grid-template-areas:
         "notification .";
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #F9FDE9;
+    height: 5.2rem;
 }
 
 .notification {

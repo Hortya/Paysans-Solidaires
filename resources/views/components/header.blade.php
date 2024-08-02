@@ -10,7 +10,10 @@
 
 <body>
 
-    <header class="flex">
-        <img src="img/logo_vert.svg" alt="Logo Paysans Solidaires">
-    </header>
+    <a href="{{route('index')}}">
+        <header class="flex">
+            <img src="img/logo_vert.svg" alt="Logo Paysans Solidaires">
+        </header>
+    </a>
 
+    <x-burger-nav />

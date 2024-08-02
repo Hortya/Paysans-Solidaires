@@ -23,7 +23,7 @@
 
 </footer>
 
-<x-burger-nav />
+
 
 </body>
 

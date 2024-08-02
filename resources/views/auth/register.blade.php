@@ -66,6 +66,5 @@
 
     </form>
 
-    <x-burger-nav />
 
 </main>
