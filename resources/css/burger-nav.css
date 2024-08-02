@@ -5,10 +5,12 @@
 
 .burger-menu {
     display: none;
-    margin-top: 4rem;
+    padding-right: 18rem;
+    margin-left: -7rem;
     background-color: #F9FDE9;
     color: #485419;
     border: 1px solid black;
+    width: 100vw;
 }
 
 .burger-shower:checked~.burger-menu {
@@ -35,16 +37,7 @@
     height: 3.14rem;
 }
 
-.container-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "notification .";
-}
-
 .notification {
-    grid-area: notification;
     margin: 1rem 0 0 4.21rem;
 }
 
@@ -53,5 +46,4 @@
     height: 5.2rem;
     position: fixed;
     bottom: 0;
-    width: 100%;
 }

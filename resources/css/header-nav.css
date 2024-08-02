@@ -5,14 +5,17 @@
 
 .burger-menu {
     display: none;
-    margin-top: 4rem;
+    padding-right: 18rem;
+    margin-left: -7.2rem;
     background-color: #F9FDE9;
     color: #485419;
     border: 1px solid black;
+    width: 100vw;
 }
 
 .burger-shower:checked~.burger-menu {
     display: block;
+    margin-top: -24.7rem;
 }
 
 .hamburger {
@@ -20,6 +23,7 @@
     width: 5rem;
     height: 5rem;
     background-image: url('/public/img/Menu.svg');
+    right: 4.21rem;
 }
 
 .burger-txt {
@@ -43,7 +47,7 @@
         "notification .";
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #F9FDE9;
     height: 5.2rem;
 }
