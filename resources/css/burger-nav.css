@@ -19,7 +19,7 @@
     position: absolute;
     width: 5rem;
     height: 5rem;
-    background-image: url('/public/img/Menu.svg');
+    background-image: url('/public/img/Menu-white.svg');
 }
 
 .burger-txt {
@@ -28,7 +28,7 @@
 }
 
 .notification-img {
-    background-image: url('/public/img/Vector.svg');
+    background-image: url('/public/img/Vector-white.svg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 2.93rem;
@@ -46,4 +46,9 @@
 .notification {
     grid-area: notification;
     margin: 1rem 0 0 4.21rem;
+}
+
+.container-nav-itm {
+    background-color: #485419;
+    height: 5.2rem;
 }

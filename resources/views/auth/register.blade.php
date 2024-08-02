@@ -1,9 +1,8 @@
-@extends('page')
+<x-header />
 @vite("resources/css/reset.css")
 @vite('resources/css/app.css')
 @vite("resources/css/style.css")
-@section('title')
-@section('content')
+@vite("resources/css/burger-nav.css")
 
 <main class="body">
 
@@ -66,6 +65,7 @@
         </div>
 
     </form>
-</main>
 
-@endsection
+    <x-burger-nav />
+
+</main>
