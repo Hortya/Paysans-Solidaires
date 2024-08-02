@@ -50,7 +50,12 @@ h6 {
 .align-center {
     text-align: center;
 }
-
+.size-small {
+    font-size: 0.85rem;
+}
+.upp {
+    text-transform: uppercase;
+}
 
 /* HEADER */
 header {
@@ -162,9 +167,23 @@ form{
 }
 
 
-/* BORDER PAGE MODIF ROLE */
+/* INPUT */
+.border-input {
+    border: solid var(--vert) 3px;
+}
+.pad-input {
+    padding: 0 8px;
+}
+
+
+
+/* BORDER PAGE MODIF ROLE + GESTION DES UTILISATEURS */
 .border-bot {
     padding-bottom: 30px;
+    border-bottom: solid var(--vert) 2px;
+}
+.border-bot2 {
+    padding-bottom: 8px;
     border-bottom: solid var(--vert) 2px;
 }
 
@@ -195,6 +214,19 @@ form{
     flex-direction: row-reverse;
     justify-content: space-between
 }
+
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.grid-input {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 
 /* GAP */
 .gap {
