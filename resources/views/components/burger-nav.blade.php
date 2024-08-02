@@ -1,6 +1,11 @@
-<div class="container-nav">
-<nav>
-    <ul class="burger-menu">
+<nav class="container-nav container-nav-itm">
+
+    <a class="notification notification-img" href="#"></a>
+
+    <div class="menu-container">
+        <input class="burger-shower" type="checkbox" id="burger-shower">
+        <label for="burger-shower" class="hamburger"></label>
+        <ul class="burger-menu">
         <li class="burger-txt"><a class="dashboard-txt" href="">Nos produits</a></li>
         <li class="burger-txt"><a class="dashboard-txt"href="">Nos producteurs</a></li>
         <li class="burger-txt"><a class="dashboard-txt" href="">Contact</a></li>
@@ -32,10 +37,5 @@
         </form></li>
         @endif
     </ul>
+    </div>
 </nav>
-<div class="notification notification-img">
-    <a href="#"></a>
-</div>
-
-
-</div>
